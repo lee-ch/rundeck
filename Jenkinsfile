@@ -19,7 +19,7 @@ pipeline {
     }
 
     stages {
-        stage('Code Checkout') {
+        stage('SCM Checkout') {
             steps {
                 script {
                     checkout([$class                          : 'GitSCM',
