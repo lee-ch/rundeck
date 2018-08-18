@@ -35,10 +35,7 @@ pipeline {
         }
         stage('Check Environment') {
             steps {
-                dir("${params.envCheckPath}") {
-                    sh 'pwd'
-                    echo "Environment Check Path: ${params.envCheckPath}"
-                }
+                echo "Environment Check Path: ${params.envCheckPath}"
             }
         }
     }
