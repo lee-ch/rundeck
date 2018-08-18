@@ -10,9 +10,9 @@ pipeline {
         }
     }
     stages {
-        steps {
-            script {
-                stage('Code Checkout') {
+        stage('Code Checkout') {
+            steps {
+                script {
                     checkout([$class:                               'GitSCM',
                             branches:                             [[name: '*/master']],
                             doGenerateSubmoduleConfigurations:    false,
