@@ -2,6 +2,7 @@
 pipeline {
     environment {
         DOCKER_LABEL = 'rundeck'
+        ENV_CHECK = 'pygit'
     }
 
     agent {
@@ -31,7 +32,7 @@ pipeline {
         }
         stage('Check Environment') {
             steps {
-                dir('pygit') {
+                dir("${env.ENV_CHECK}") {
                     sh 'pwd'
                     echo "${env.DOCKER_LABEL}"
                 }
