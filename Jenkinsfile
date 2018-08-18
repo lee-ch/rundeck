@@ -11,7 +11,7 @@ pipeline {
     }
     stages {
         stage('Code Checkout') {
-            checkout([$class:                               'GitSCM'
+            checkout([$class:                               'GitSCM',
                       branches:                             [[name: '*/master']],
                       doGenerateSubmoduleConfigurations:    false,
                       extensions:                           [[$class:           'RelativeTargetDirectory',
