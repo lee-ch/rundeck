@@ -13,7 +13,7 @@ pipeline {
     options {
         timestamps()
     }
-    
+
     stages {
         stage('Code Checkout') {
             steps {
@@ -33,6 +33,7 @@ pipeline {
             steps {
                 dir('pygit') {
                     sh 'pwd'
+                    echo "${env.DOCKER_LABEL}"
                 }
             }
         }
