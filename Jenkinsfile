@@ -5,7 +5,7 @@ pipeline {
     }
 
     parameters {
-        string(defaultValue: 'pygit', descript: '', name: 'envCheckPath')
+        string(defaultValue: 'pygit', description: '', name: 'envCheckPath')
     }
 
     agent {
