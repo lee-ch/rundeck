@@ -17,7 +17,7 @@ pipeline {
                             branches:                             [[name: '*/master']],
                             doGenerateSubmoduleConfigurations:    false,
                             extensions:                           [[$class:           'RelativeTargetDirectory',
-                                                                    relativeTargetDir: '']],
+                                                                    relativeTargetDir: 'pygit-utils']],
                             submoduleCfg:                         [],
                             userRemoteConfigs:                    [[credentialsId: 'lee', url: 'git@github.com:lee-ch/pygit-utils.git']]])
                 }
